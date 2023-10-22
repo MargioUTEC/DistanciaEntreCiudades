@@ -2,11 +2,11 @@
 ## Integrantes:
 - Margiory Alvarado Chavez
 - Milloshy Crisóstomo Rodriguez
-## Indicaciones:
+## Indicaciones:  
 Implementar un programa:
 - Input: Dos nombre de ciudad y país.
-- Devuelva la distancia entre ellos.
-Implementar un servicio:
+- Devuelva la distancia entre ellos.  
+Implementar un servicio:  
 - Devuelva la latitud y longitud.
 - Implementar tres formas de hacer esto y haga switch utilizando Interfaces y Factory Method.  
 **Forma 1:** Leer el CSV worldcities.csv.  
