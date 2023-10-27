@@ -1,7 +1,7 @@
-from Forma1 import *
-from Forma2 import *
-from Forma3 import *
-from interfaz1 import *
+from Archivos.Forma1 import *
+from Archivos.Forma2 import *
+from Archivos.Forma3 import *
+from Archivos.interfaz1 import *
 
 class FactoryMethod:
     def escoger_forma(self,form: str) -> Interfaz:

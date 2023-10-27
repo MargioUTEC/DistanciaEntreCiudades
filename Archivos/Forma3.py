@@ -1,4 +1,4 @@
-from interfaz1 import *
+from Archivos.interfaz1 import *
 class withMock(Interfaz):
     def obtenerll(self, Ciudad: str, Pais: str) -> Tuple[float, float]:
         return 37.5600, 126.9900

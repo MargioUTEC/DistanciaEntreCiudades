@@ -1,7 +1,7 @@
-from interfaz1 import *
-from Haversine import *
+from Archivos.interfaz1 import *
+from Archivos.Haversine import *
 from FactoryMethod import FactoryMethod
-from formasolicitadas import *
+from Archivos.formasolicitadas import *
 
 
 def main() -> None:
