@@ -68,6 +68,31 @@ def distancia_heversine(ciudad1, pais1, ciudad2, pais2):
     distancia=(haversine(coordenadas1, coordenadas2))
     return distancia
 
+# FUNCIONES PARA EL TEST1.PY
+ciudadesValidas = []
+def ciudades_Validas():
+    with open('worldcities.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            ciudadesValidas.append(row['city'])
+
+def verificarAPI (ciudad1, ciudad2, pais1, pais2):
+    url1 = f"https://nominatim.openstreetmap.org/search?q={ciudad1},{pais1}&format=json"
+    url2 = f"https://nominatim.openstreetmap.org/search?q={ciudad2},{pais2}&format=json"
+    response1 = requests.get(url1)
+    response2 = requests.get(url2)
+    if response1.status_code == 200 and response2.status_code == 200:
+        data1 = response1.json()
+        data2 = response2.json()
+        if not data1 and not data2:
+            return False
+        else:
+            return True
+    else:
+        print(f"Error al hacer la solicitud a la API")
+        return False
+    pass
+
 def menu():
     print("Que forma va a solicitar?:")
     print("1: Forma con csv")
